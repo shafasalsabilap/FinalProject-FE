@@ -56,10 +56,10 @@ export interface Request { }
 
 export const addSongAPI = async (accessToken: string, playlist_id: string, itemParams: ItemParams): Promise<ResponseaddSongAPI> => {
     const header = {
-        Authorization: `Bearer ${accessToken}` // set access token in header
+        Authorization: `Bearer ${accessToken}` 
     }
 
-    const data = await axios //add items to playlist
+    const data = await axios 
         .post(
             `https://api.spotify.com/v1/playlists/${playlist_id}/tracks`, itemParams,
             {

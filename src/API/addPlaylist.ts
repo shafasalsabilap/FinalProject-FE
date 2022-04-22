@@ -45,15 +45,15 @@ export type ResponsePlaylist = {
 
 export const addPlaylistAPI = async (accessToken: string, userID: string, playlistData: Params): Promise<ResponsePlaylist> => {
     const header = {
-        Authorization: `Bearer ${accessToken}` // set access token in header
+        Authorization: `Bearer ${accessToken}` 
     }
-    const bodyParams = { // body params for add playlist
+    const bodyParams = { 
         name: playlistData.title,
         description: playlistData.description,
         collaborative: false,
         public: false
     }
-    const data = await axios //create playlist
+    const data = await axios 
         .post(
             `https://api.spotify.com/v1/users/${userID}/playlists`, bodyParams,
             {

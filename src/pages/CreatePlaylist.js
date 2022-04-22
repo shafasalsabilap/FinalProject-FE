@@ -4,9 +4,7 @@ import SearchForm from '../components/Search';
 import Songs from '../components/SongIndex';
 import Playlist from '../components/Playlist';
 import Profile from './Profile';
-import LogoutIcon from '@mui/icons-material/Logout';
-import Button from '@mui/material/Button';
-import { fetchUserAPI } from '../API/fetchUser';
+import { fetchSongAPI } from '../API/fetchSong';
 import { addPlaylistAPI } from '../API/addPlaylist';
 import { addSongAPI } from '../API/addSong';
 
@@ -25,6 +23,7 @@ const CreatePlaylist = () => {
                 selected: !!selectedSong.find((selectedSong) => selectedSong === track.uri), 
             }));
         setMergedSong(mergedSongWithselectedSong); 
+        
     }, [selectedSong, songData]);
 
     const handleSelect = (uri) => {
@@ -39,7 +38,7 @@ const CreatePlaylist = () => {
     };
 
     const handleGetSong = async () => {
-        const data = await fetchUserAPI(query, accessToken );
+        const data = await fetchSongAPI(query, accessToken );
         setSongData(data); 
         console.log(data);
     }
@@ -79,28 +78,15 @@ const CreatePlaylist = () => {
         const data = await addSongAPI(accessToken, playlist_id, itemParams);
         console.log("Items added to playlist: ", data);
     }
-
-    const keluar = useState(false);
-    const handleLogout = ()=>{
-        keluar(false);
-        localStorage.clear()
-        window.location = `http://localhost:3000/`;
-    }
+    
 
     return (
         <>
-            <h1> Spotify Create Playlist</h1>
-            <div className='form-profile'>
-                <Profile />
-                <Button  onClick={handleLogout} size="large" variant="contained" color="success" startIcon={<LogoutIcon />}> LOGOUT </Button> {/* ADD NEW UI BUTTON FROM MUI */}
-                {/* <button onClick={handlekeluar}>LogOut</button> */}
-                <br/><br/>
-            </div>
-
+            <h1> OURFY CREATE PLAYLIST</h1>
             <Playlist
                 handlePlaylist={handlePlaylist}
                 handlePlaylistSubmit={handlePlaylistSubmit}
-                addPlaylistAPI={addPlaylistAPI} />
+                addPlaylist={addPlaylistAPI} />
             
             <div className="form-search">
                 <SearchForm
@@ -108,13 +94,14 @@ const CreatePlaylist = () => {
                     onChange={handleSearch} />
                 <br />
                 <div className="grid-container">
-                    {mergedSong !== undefined && ( // if merged tracks exist
-                        <Songs // render tracks
+                    {mergedSong !== undefined && ( 
+                        <Songs 
                             mergedSong={mergedSong}
                             handleSelect={handleSelect} key={mergedSong.uri} />
                     )}
                 </div>
             </div>
+            <Profile />
         </>
     )
 }

@@ -9,12 +9,12 @@ export type SearchFormProps = {
 
 const SearchForm = ({ onSubmit, onChange }: SearchFormProps) => {
     return (
-        <div >
+        <div className="search-song" >
             <h2> Search Song</h2>
             <form onSubmit={onSubmit}>
             <input onChange={onChange} />
             <br></br> <br></br>
-            <Button type="submit" value="Submit" variant="contained" color="success" startIcon={<SearchIcon />}> SEARCH </Button> {/* ADD NEW UI BUTTON FROM MUI */}
+            <Button type="submit" style={{ backgroundColor: 'black', color: 'white',}} value="Submit" variant="contained" color="success" startIcon={<SearchIcon />}> SEARCH </Button> {/* ADD NEW UI BUTTON FROM MUI */}
             {/* <button type="submit"> Search </button> */}
             </form>
         </div>

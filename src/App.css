@@ -1,26 +1,38 @@
 
 body {
-  background-color: #4eb473;
+  background-image: url('assets/MUSIFY.png');
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
+
+.form-playlist h2 {
+  color: black;
+}
+
+.search-song h2 {
+  color: black;
+}
+.form-playlist label {
+  color: black;
+} 
 .form-playlist {
   text-align: center;
   border: 1px solid #192f1f;
+  background-color: #fbfffc;
   border-radius: 10px;
   text-align: center;
-  background-color: #b2edc7;
   margin-top: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-right: 200px;
   margin-left: 200px;
+  color: black;
 }
 
 .form-playlist textarea {
   height: 40px;
   width: 230px;
-  background-color:#cff5dc;
+  background-color:#f7f7f7;
   border-radius: 4px;
   margin-top: 5px;
 }
@@ -28,7 +40,7 @@ body {
 input {
   height: 40px;
   width: 230px;
-  background-color: #cff5dc;
+  background-color: #f7f7f7;
   border-radius: 4px;
   margin-top: 5px;
 }
@@ -36,7 +48,7 @@ input {
 button {
   border: none;
   border-radius: 30px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   background-color: #3f6d4f;
   padding: 16px 32px;
   text-align: center;
@@ -48,22 +60,20 @@ button {
   cursor: pointer
 }
 
-button:hover {
+Button:hover {
   background-color: #cff5dc;
   color: black;
   border: 2px solid black;
 }
 
 .card-login {
-  border: 1px solid #192f1f;
-  border-radius: 10px;
   text-align: center;
-  margin-top: 100px;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   margin-right: 150px;
   margin-left: 150px;
-  background-color: #cff5dc;
+  font-size: 80px;
+  padding-top: -10px;
+  color: #ffffff;
 }
 
 /* FLEX USED FOR SONG INFO */
@@ -86,15 +96,14 @@ button:hover {
 
 /* GRID USED FOR TRACK TABLES */
 .song-card {
-  background-color: #cff5dc;
+  background-color: #d0dcd4;
   display: grid;
   grid-template-columns: minmax(500px, 30%) 1fr;
   border: 1px solid #192f1f;
   border-radius: 10px;
   margin-top: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 100px; 
+  padding-bottom: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -111,12 +120,20 @@ button:hover {
   text-align: center;
 }
 
+.song-title h1 {
+  color: black;
+}
+
+.song-title h2 {
+  color: black;
+}
 .img-profile{
   border: 1px solid black;
-  border-radius: 50px;
+  border-radius: 130px;
   margin: 20px;
   background-color: #cff5dc;
-  width: 20%;
+  width: 50%;
+  margin-top: 30px;
 }
 
 .profile {
@@ -124,27 +141,35 @@ button:hover {
   flex-direction: row;
   justify-content: center;
 }
-
+.profile-page h1{
+  color: black;
+}
+.profile-page h2{
+  color: black;
+}
 .profile p{
   padding-top: 45px;
   font-size: 20px;
 }
-.form-profile {
+.profile-page {
   text-align: center;
   border: 1px solid #192f1f;
   border-radius: 10px;
-  background-color: #b2edc7;
-  margin-top: 30px;
+  background-color: #f7f7f7;
+  margin-top: 100px;
   margin-left: 500px;
   margin-right: 500px;
+  padding-bottom: 20px;
+  color: black;
     
 }
 
+/* FORM SEARCH SONG */
 .form-search {
   text-align: center;
   border: 1px solid #192f1f;
   border-radius: 10px;
-  background-color: #b2edc7;
+  background-color: #fbfffc;
   margin-top: 20px;
   margin-left: 200px;
   margin-right: 200px;
@@ -152,6 +177,40 @@ button:hover {
     
 }
 
-h1{
-  color: black;
+.home-text {
+  font-size: 50px;
+  color: white;
+}
+.logo-nav {
+  width: 130px;
+}
+.home-text {
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.aboutus-text h1{
+  font-size: 150px;
+  color: white;
+}
+
+.aboutus-text h3{
+  font-size: 40px;
+  color: white;
+  margin-bottom: -50px;
+}
+.aboutus-text p{
+  font-size: 25px;
+  color: white;
+  margin-bottom: -50px;
+}
+
+.aboutus-text {
+  color: white;
+  margin-top: 80px;
+}
+
+.logout-text h1{
+  font-size: 150px;
+  color: white;
 }

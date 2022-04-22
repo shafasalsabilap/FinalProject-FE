@@ -12,6 +12,7 @@ const Profile = () => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
+        console.log(accessToken)
         accessToken !== undefined && (
             fetchUserAPI(accessToken).then(res => {
                 dispatch(setUserID(res.id));
@@ -21,10 +22,14 @@ const Profile = () => {
     }, [accessToken, dispatch]);
 
     return (
-        <div className="profile">
-            <img className="img profile" src={imgSrc} alt={UserName} />
-            <p><PersonOutlineIcon fontSize="large"/> Username : {UserName}</p>
+        <div className='profile-page'>
+        <div className="">
+        <h1 className='profile-text'> MY PROFILE</h1>
+            <img className="img-profile" src={imgSrc} alt={UserName} />
+            <h2><PersonOutlineIcon fontSize="large"/> USERNAME : {UserName}</h2>
         </div>
+        </div>
+        
     )
 }
 

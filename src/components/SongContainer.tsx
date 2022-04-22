@@ -23,7 +23,7 @@ const SongContainer = ({ imgSrc, title, artists, releasedate, album, selected, h
     return (
         <div className="song-card">
             <div className="card-search">
-                <img src={imgSrc} />
+                <img src={imgSrc} alt="" />
                 
                 <div className="song-title">
                     {/*ADD ICON WITH MATERIAL UI LIBRARY */}
@@ -36,7 +36,7 @@ const SongContainer = ({ imgSrc, title, artists, releasedate, album, selected, h
                         RemoveCircleOutlineIcon (-) = DESELECT
                         AddCircleOutlineIcon (+)    = SELECT
                     */}
-                    <Button onClick={() => handleSelect(uri)} variant="contained" color="success"> {selected ? <RemoveCircleOutlineIcon/> : <AddCircleOutlineIcon/>} </Button> 
+                    <Button onClick={() => handleSelect(uri)} style={{ backgroundColor: 'black', color: 'white',}} variant="contained" color="success"> {selected ? <RemoveCircleOutlineIcon/> : <AddCircleOutlineIcon/>} </Button> 
                     
                     {/* <button onClick={() => handleSelect(uri)}> {Selected ? 'Deselect' : 'Select'} </button> OLD BUTTON*/}
                 </div>
