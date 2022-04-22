@@ -19,7 +19,7 @@ const Playlist = ({ handlePlaylist, handlePlaylistSubmit, addPlaylist, myFunctio
                 onClick={() => {alert("Are you sure want to make this playlist? ");}} > SAVE </Button> 
                  <script>
                     function myFunction() {
-                    alert("Your playlist has been saved!!!")
+                    alert("Your playlist has been saved!")
                      }
                 </script>
             </form>
