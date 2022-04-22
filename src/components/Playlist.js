@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 
-const Playlist = ({ handlePlaylist, handlePlaylistSubmit, addPlaylist }) => {
+const Playlist = ({ handlePlaylist, handlePlaylistSubmit, addPlaylist, myFunction }) => {
     return (
         <div className="form-playlist">
             <h2>Create Playlist</h2>
@@ -15,8 +15,13 @@ const Playlist = ({ handlePlaylist, handlePlaylistSubmit, addPlaylist }) => {
                 <br/>
                 <br/>
                 
-                <Button type="submit" style={{ backgroundColor: 'black', color: 'white',}} value="Submit" variant="contained" color="success" startIcon={<SaveAltIcon />}> SAVE </Button> {/* ADD NEW UI BUTTON FROM MUI */}
-                {/* <button className="selectButton" type="submit" value="Submit" onclick="alert('Your playlist has been saved!')">Save</button> OLD BUTTON*/}
+                <Button type="submit" style={{ backgroundColor: 'black', color: 'white',}} value="Submit" variant="contained" color="success" startIcon={<SaveAltIcon />}
+                onclick="myFunction()" > SAVE </Button> 
+                 <script>
+                    function myFunction() {
+                    alert("Your playlist has been saved!")
+                     }
+                </script>
             </form>
         </div>
     )
