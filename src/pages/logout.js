@@ -7,7 +7,7 @@ const Logout = () => {
     const handlekeluar = ()=>{
         setmasuk(false);
         localStorage.clear()
-        window.location = `http://localhost:3000/`;
+        window.location = `https://final-project-fe-tau.vercel.app/`;
     }
     return (
         <div className='logout-text'>
