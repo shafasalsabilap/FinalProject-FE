@@ -12,7 +12,7 @@ Ourfy is a website was built with React programming language. This website funct
 
 # INSTALLATION AND RUN PROGRAM
 ### HOW TO RUN PROGRAM WITHOUT INSTALLATION?
-You can just click this link wwwww and login, after that you can try to run the program without having to install anything.
+You can just click this link final-project-fe-tau.vercel.app and login, after that you can try to run the program without having to install anything.
 
 ### WITH INSTALLATION
 1. Download this github sourcecode, you can download with zip
