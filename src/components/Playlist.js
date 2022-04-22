@@ -16,10 +16,10 @@ const Playlist = ({ handlePlaylist, handlePlaylistSubmit, addPlaylist, myFunctio
                 <br/>
                 
                 <Button type="submit" style={{ backgroundColor: 'black', color: 'white',}} value="Submit" variant="contained" color="success" startIcon={<SaveAltIcon />}
-                onClick={() => {alert("Are you sure want to make this playlist? ");}} > SAVE </Button> 
+                onClick="myFunction()" > SAVE </Button> 
                  <script>
                     function myFunction() {
-                    alert("Your playlist has been saved!")
+                    alert("Your playlist has been saved!!!")
                      }
                 </script>
             </form>
